@@ -26,6 +26,7 @@ services:
       - log_level=info
       - WHISPER__MODEL=Systran/faster-distil-whisper-large-v3
       - WHISPER__compute_type=int8_float32
+      # - NVIDIA_DISABLE_REQUIRE=1 # Uncomment if your NVIDIA driver's CUDA version is < 12.6 (https://github.com/speaches-ai/speaches/issues/276#issuecomment-2613810626)
     volumes:
       - huggingface-hub:/home/ubuntu/.cache/huggingface/hub
     deploy:
